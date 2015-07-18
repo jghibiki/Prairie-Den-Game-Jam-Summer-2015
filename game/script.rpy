@@ -3,15 +3,33 @@
 # Declare images below this line, using the image statement.
 # eg. image eileen happy = "eileen_happy.png"
 image black = "#000"
+image white = "#fff"
+image img_ben = "game/images/characters/white/ben_carlson.png"
+image img_chris = "game/images/characters/white/chris_harrison.png"
+image img_ceo = "game/images/characters/white/ceo.png"
+image img_traitor = "game/images/characters/white/traitor.png"
+image img_scientist = "game/images/characters/white/scientist.png"
+image img_inventor = "game/images/characters/white/inventor.png"
+image img_investor = "game/images/characters/white/investor.png"
 
 # Declare characters used by this game.
-define ben = Character('Ben', color="#c8ffc8")
-define _ben = Character('Ben', type=nvl, color="#c8ffc8")
+define ben = Character('Ben', color="#FF7700")
+define _ben = Character('Ben', type=nvl, color="#FF7700")
+
+define ceo = Character('Chad Hewett', color="#0088FF")
+define scientist = Character('Dr. Dorian', type=nvl, color="#0088FF")
+define inventor = Character("Kimberly McLaren", type=nvl, color="#0088FF")
+
+define evnironmentalist = Character('Lenard Malcom', color="#09FF00")
+define traitor = Character("Ellen Wyse", color="#09FF00")
+
+define chrise = Character("Chris Harrison", color="#c8ffc8")
+
 
 #########
 #NOTES:
 # NeoGenisis: + integer values
-# Celestial Preservation Coalition - integer values
+# Celestial Preservation Coalition: - integer values
 #
 # Character Aliases - SED project to fix
 # - X22 : PhD
@@ -20,13 +38,10 @@ define _ben = Character('Ben', type=nvl, color="#c8ffc8")
 # The game starts here.
 label start:
 
+    call intro
+
     #initialize state values
     python:
-
-        # character names
-        phd = "phd"
-        implementer = "implementer"
-
         # video flags
         seen_ben_intro = False
         seen_origami_intro = False
@@ -66,6 +81,8 @@ label start:
         vp_interview_seen = False
         vp_interview_synopsis = None
 
+
+        # alignment values
         stance = 0
         neogeo_influence = 0
         cpc_influence = 0
@@ -224,3 +241,8 @@ label notepad:
 
 
     jump notepad
+
+label intro:
+    scene black
+
+    return
