@@ -1,7 +1,8 @@
 label phd_interview:
     show black with dissolve
     pause 0.5
-    show room with dissolve
+    scene lab with dissolve
+    show img_scientist
     ben "Dr. Dorian, your theory of the Origami Effect is supposed to eventually bring  about a new chapter in the efficiency of space travel. How did you develop this theory?"    
 
     scientist "The theory of folding space time upon itself is not a new concept.{w} However, I have conceptualized a theory that would allow us to - theoretically - fold space over on itself and then punch through the \"surface\" of the universe creating a hole that leads to another location in space, often called a wormhole."
@@ -19,9 +20,10 @@ label phd_interview:
 
     scientist "Ha! Even if someone did manage to implement my theory any time soon - much less weaponize it - the ammount of energy it would take to, fold space over and over until enough celestial bodies are positioned to significantly attract each other gravitaionally to produce a black hole, is tremendous. By our current standards and forseeable future standards, impossible!"
 
-    #fade to black
+    scene black with dissolve
+    pause 0.2
+    scene room with dissolve
 
-    #fade in on bedroom
     menu:
         "Following my interview with Dr. Dorian, I think..."
 
@@ -41,9 +43,9 @@ label phd_interview:
     
     ben "Time to write that article"
     
-    show black with dissolve
-    pause 0.5
-    show room with dissolve
+    scene black with dissolve
+    pause 0.4
+    scene room with dissolve
     return
 
 

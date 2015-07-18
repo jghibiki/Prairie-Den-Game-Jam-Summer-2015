@@ -63,3 +63,4 @@ error.txt
 *.rpyb
 tmp/
 saves/
+*.bak
