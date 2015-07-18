@@ -53,6 +53,7 @@ label investor_interview:
     show black with dissolve
     pause 0.5
     show room with dissolve
+    show img_investor
 
     ben "I just can't find anything on him.{w} It's like he's watching my every move.{w} I'm being followed when I'm out, I better be careful."
 
@@ -75,6 +76,11 @@ label investor_interview:
 
 
 label enviro_interview:
+    show black with dissolve
+    pause 0.5
+    show city with dissolve
+    show img_enviro 
+
     ben "Mr. Malcom, your organization, the Celestial Preservation Coalition, recently called for origami effect regulations.{w} You also publicly encourage challenging NeoGenesis while they deploy their genesis gates.{w} What sparked these protests?"
 
     environmentalist "I’m glad that somebody will listen to our side, Ben.{w} Due to the recent accident at the Farest system's genesis gate caused by energy anomalies said to be caused by a solar flare.{w} It is very clear that these genesis gates can be dangerous.{w} We need new regulations and more competition in the industry to help ensure things are done right.{w} There is no reason that an entire star system should be wiped from existence due to an accident."
@@ -82,6 +88,10 @@ label enviro_interview:
     ben "Genesis gates alleges that their genesis gate was sabotaged.{w} It might have not been an accident."
 
     environmentalist "I can assure you Mr. Carlson we are a peaceful organization acting within the bounds of the law.{w} I do have to admit that sabotage might help in our end goal, but blowing up a whole star system does not.{w} Here, let me help you get in contact with our Vice President, Ellen Wyse, who oversees our internal day to day operations."
+
+    scene black with dissolve
+    pause 0.2
+    scene room with dissolve
 
     menu:
         "Following my interview with Lenard Malcom of CPC, I think..."
@@ -99,22 +109,37 @@ label enviro_interview:
             $stance += 1
             $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
 
+    ben "Time to write this article."
+
+    scene black with dissolve
+    pause 0.2
+    scene room wit dissolve
+
     return
 
 label vp_interview:
-   ben "Ellen Wyse, I was informed that you lead the day to day operations for CPC.{w} Could you shed some light on how your organization operates for me and the public?"
+    show black with dissolve
+    pause 0.5
+    show city with dissolve
+    show img_traitor
 
-   traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that despite their engineering efforts to lower the energy required to cause the origami effect for transportation they're still using near the theoretical power levels, while also not increasing the distance between their 'gates'."
+    ben "Ellen Wyse, I was informed that you lead the day to day operations for CPC.{w} Could you shed some light on how your organization operates for me and the public?"
 
-   ben "What do you mean by 'gates'?"
+    traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that despite their engineering efforts to lower the energy required to cause the origami effect for transportation they're still using near the theoretical power levels, while also not increasing the distance between their 'gates'."
 
-   traitor "Don't let Chad Hewett's charm fool you.{w} The Farest System accident/sabotage was a cover up for testing the genesis gate's potential as a weapon.{w} We just can't definitively prove because... well the evidence is gone and with the rumors of it being a sabotage with CPC being a suspect it's difficult to get close to any genesis gates to see if they too have the same or better potential for that matter as a weapon. I know it might sound far fetched to you but we must stop Chad, please Ben.{w} What do you have left to lose since your reputation was washed away from not fact checking a military operative, even if he was a childhood friend?"
+    ben "What do you mean by 'gates'?"
 
-   ben "I'll think about it. This is a lot to take in."
+    traitor "Don't let Chad Hewett's charm fool you.{w} The Farest System accident/sabotage was a cover up for testing the genesis gate's potential as a weapon.{w} We just can't definitively prove because... well the evidence is gone and with the rumors of it being a sabotage with CPC being a suspect it's difficult to get close to any genesis gates to see if they too have the same or better potential for that matter as a weapon. I know it might sound far fetched to you but we must stop Chad, please Ben.{w} What do you have left to lose since your reputation was washed away from not fact checking a military operative, even if he was a childhood friend?"
 
-   traitor "I understand Ben.{w} Remember you can't take your time with this, but you can't disclose me as a source, for obvious reasons."
+    ben "I'll think about it. This is a lot to take in."
 
-   menu:
+    traitor "I understand Ben.{w} Remember you can't take your time with this, but you can't disclose me as a source, for obvious reasons."
+
+    scene black with dissolve
+    pause 0.2
+    scene room with dissolve
+
+    menu:
         "Following my interview with Ellen Wyse, VP of CPC, I think..."
 
         "A full investigation should be conducted on the genesis gates by a reputable third party.":
@@ -130,4 +155,10 @@ label vp_interview:
             $stance += 1
             $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
 
-   return
+    ben "Time to get to work."
+
+    scene black with dissolve
+    pause 0.2
+    scene room with dissolve
+
+    return

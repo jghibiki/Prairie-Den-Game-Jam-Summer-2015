@@ -20,6 +20,7 @@ image img_scientist = im.FactorScale("images/characters/white/scientist.png", 0.
 image img_scientist_mini = im.FactorScale("images/characters/white/scientist.png", 0.25)
 image img_inventor = im.FactorScale("images/characters/white/inventor.png", 0.5)
 image img_investor = im.FactorScale("images/characters/white/investor.png", 0.5)
+image img_enviro = im.FactorScale("images/characters/white/environmentalist.png", 0.5)
 
 # Declare characters used by this game.
 define ben = Character('Ben', color="#FF7700")
