@@ -51,6 +51,7 @@ label investor_interview:
     show black with dissolve
     pause 0.5
     show room with dissolve
+    show img_investor
 
     ben "I just can't find anything on him.{w} It's like he's watching my every move.{w} I'm being followed when I'm out though, I better be careful."
 
@@ -81,6 +82,10 @@ label enviro_interview:
 
     environmentalist "I can assure you Mr. Carlson we are a peaceful organization acting within the bounds of the law.{w} I do have to admit that sabotage might help in our end goal, but blowing up a whole star system does not.{w} Here, let me help you get in contact with our Vice President, Ellen Wyse, who oversees our internal day to day operations."
 
+    scene black with dissolve
+    pause 0.2
+    scene room with dissolve
+
     menu:
         "Following my interview with Lenard Malcom of CPC, I think..."
 
@@ -102,9 +107,14 @@ label enviro_interview:
     return
 
 label vp_interview:
+    show black with dissolve
+    pause 0.5
+    show city with dissolve
+    show img_traitor
+
     ben "Ellen Wyse, I was informed that you lead the day to day operations for CPC.{w} Could you shed some light on how your organization operates for me and the public?"
 
-    traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that their engineering efforts succeeded lowering the energy required to cause the origami effect for transportation they're still using power up to the hypothetical requirements, while also not increasing the distance between their 'gates'."
+    traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that despite their engineering efforts to lower the energy required to cause the origami effect for transportation they're still using near the theoretical power levels, while also not increasing the distance between their 'gates'."
 
     ben "What do you mean by 'gates'?"
 
@@ -118,11 +128,10 @@ label vp_interview:
         "Following my interview with Ellen Wyse, VP of CPC, I think..."
 
         "A full investigation should be conducted on the genesis gates by a reputable third party.":
-            $stance = 2
+            $stance = 3
             $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
 
-        "Chad Hewett needs to be investigated for plans to use the genesis gates as weapons.":
-            $stance = 3
+        "Chad Hewett needs to be investigated for plans to use the genesis gates as weapons.": 
             $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
 
         "Expose Ellen for the crazed lunatic she is.":
