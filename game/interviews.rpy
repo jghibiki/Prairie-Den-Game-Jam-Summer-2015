@@ -102,5 +102,32 @@ label enviro_interview:
     return
 
 label vp_interview:
+   ben "Ellen Wyse, I was informed that you lead the day to day operations for CPC.{w} Could you shed some light on how your organization operates for me and the public?"
 
-    return
+   traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that despite their engineering efforts to lower the energy required to cause the origami effect for transportation they're still using near the theoretical power levels, while also not increasing the distance between their 'gates'."
+
+   ben "What do you mean by 'gates'?"
+
+   traitor "Don't let Chad Hewett's charm fool you.{w} The Farest System accident/sabotage was a cover up for testing the genesis gate's potential as a weapon.{w} We just can't definitively prove because... well the evidence is gone and with the rumors of it being a sabotage with CPC being a suspect it's difficult to get close to any genesis gates to see if they too have the same or better potential for that matter as a weapon. I know it might sound far fetched to you but we must stop Chad, please Ben.{w} What do you have left to lose since your reputation was washed away from not fact checking a military operative, even if he was a childhood friend?"
+
+   ben "I'll think about it. This is a lot to take in."
+
+   traitor "I understand Ben.{w} Remember you can't take your time with this, but you can't disclose me as a source, for obvious reasons."
+
+   menu:
+        "Following my interview with Ellen Wyse, VP of CPC, I think..."
+
+        "A full investigation should be conducted on the genesis gates by a reputable third party.":
+            $stance -= 1
+            $cpc_influence += 1
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+
+        "Chad Hewett needs to be investigated for plans to use the genesis gates as weapons.": 
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+
+        "Expose the crazed vendeta between CPC and NeoGenesis.":
+            $neog_influence += 1
+            $stance += 1
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+
+   return
