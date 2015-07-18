@@ -113,23 +113,23 @@ label vp_interview:
     show img_traitor
 
    
-ben "Ellen Wyse, I was informed that you lead the day to day operations for CPC.{w} Could you shed some light on how your organization operates for me and the public?"
+    ben  "Ellen Wyse, I was informed that you lead the day to day operations for CPC.{w} Could you shed some light on how your organization operates for me and the public?"
 
-traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that despite their engineering efforts to lower the energy required to cause the origami effect for transportation they're still using near the theoretical power levels, while also not increasing the distance between their 'gates'."
+    traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that despite their engineering efforts to lower the energy required to cause the origami effect for transportation they're still using near the theoretical power levels, while also not increasing the distance between their 'gates'."
 
-   ben "What do you mean by 'gates'?"
+    ben "What do you mean by 'gates'?"
 
-   traitor "Don't let Chad Hewett's charm fool you.{w} The Farest System accident/sabotage was a cover up for testing the genesis gate's potential as a weapon.{w} We just can't definitively prove it because...{w} well the evidence is gone and with the rumors of it being a sabotage with CPC being a suspect it's difficult to get close to any genesis gates to see if they too have the same or better potential for that matter as a weapon.{w} I know it might sound far fetched to you but we must stop Chad, please Ben.{w} What do you have left to lose since your reputation was washed away from not fact checking a military operative, even if he was a childhood friend?"
+    traitor "Don't let Chad Hewett's charm fool you.{w} The Farest System accident/sabotage was a cover up for testing the genesis gate's potential as a weapon.{w} We just can't definitively prove it because...{w} well the evidence is gone and with the rumors of it being a sabotage with CPC being a suspect it's difficult to get close to any genesis gates to see if they too have the same or better potential for that matter as a weapon.{w} I know it might sound far fetched to you but we must stop Chad, please Ben.{w} What do you have left to lose since your reputation was washed away from not fact checking a military operative, even if he was a childhood friend?"
 
-   ben "I'll think about it. This is a lot to take in."
+    ben "I'll think about it. This is a lot to take in."
 
-   traitor "I understand, Ben.{w} Remember you can't take your time with this issue. Obviously you shouldn't disclose me as a source on this matter."
+    traitor "I understand, Ben.{w} Remember you can't take your time with this issue. Obviously you shouldn't disclose me as a source on this matter."
 
-   scene black with dissolve
-   pause 0.2
-   scene room with dissolve
+    scene black with dissolve
+    pause 0.2
+    scene room with dissolve
 
-   menu:
+    menu:
         "Following my interview with Ellen Wyse, VP of CPC, I think..."
 
         "A full investigation should be conducted on the genesis gates by a reputable third party.":
@@ -149,4 +149,4 @@ traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w
     pause 0.5
     show room with dissolve
 
-   return
+    return
