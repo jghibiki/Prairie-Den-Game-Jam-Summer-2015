@@ -559,3 +559,59 @@ init -2:
         selected_hover_color "#cc0"
         insensitive_color "#4448"
 
+
+screen computer():
+    frame:
+        xalign 0.98
+        yalign 0.98
+       
+        xminimum 0.4
+        xmaximum 0.4
+
+        yminimum 0.3
+        ymaximum 0.3
+        
+
+        viewport:
+            scrollbars "vertical"
+            mousewheel True
+
+            vbox:
+
+                if computer_mode == None:
+                    textbutton "Watch News Clips" action Return("watch_video")
+                    textbutton "Check Email" action Return("check_email")
+                    textbutton "Leave Computer" action Return("leave_computer")
+
+                if computer_mode == "video":
+                    textbutton "Ben Carlson Misreports Mass Execution" action Return("ben_intro_video")
+                    if not first_video:
+                        textbutton "Origami Effect Conceptualized by X22  PhD" action Return("origami_intro_video")
+
+                    textbutton "Back" action Return("exit_videos")
+                    
+                
+                if computer_mode == "email":
+                   
+                    textbutton "Back" action Return("exit_email")
+
+
+
+screen investigate:
+    frame:
+        xalign 0.98
+        yalign 0.98
+       
+        xminimum 0.4
+        xmaximum 0.4
+
+        yminimum 0.3
+        ymaximum 0.3
+        
+        viewport:
+            scrollbars "vertical"
+            mousewheel True
+
+            vbox:
+                textbutton "Check Computer" action Return("start_computer")
+
