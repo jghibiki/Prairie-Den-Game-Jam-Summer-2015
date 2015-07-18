@@ -6,10 +6,8 @@ image black = "#000"
 image white = "#fff"
 image room = im.FactorScale("images/backgrounds/captainsloft.jpg", 1.0)
 image computer = im.FactorScale("images/backgrounds/captainsloft.jpg", 1.0)
-image computer_video = im.FactorScale("images/backgrounds/captainsloft.jpg", 2.2)
+image computer_video = im.FactorScale("images/backgrounds/captainsloft.jpg", 1.0)
 image city = im.FactorScale("images/backgrounds/city.jpg", 0.75)
-image hall = im.FactorScale("images/backgrounds/messhallwindow.jpg", 0.75)
-image space2 = im.FactorScale("images/backgrounds/space2.jpg", 0.62)
 image lab = im.FactorScale("images/backgrounds/lab.jpg", 1.2)
 
 # character images
@@ -49,8 +47,6 @@ define video = Character("", kind=nvl, color="#fff")
 
 # The game starts here.
 label start:
-
-    call intro
 
     #initialize state values
     python:
