@@ -4,13 +4,11 @@
 # eg. image eileen happy = "eileen_happy.png"
 image black = "#000"
 image white = "#fff"
-image room = im.FactorScale("images/backgrounds/captainsloft.jpg", 0.75)
-image computer = im.FactorScale("images/backgrounds/captainsoffice.jpg", 0.75)
-image computer_video = im.FactorScale("images/backgrounds/captainsoffice2_dark.jpg", 0.75)
+image room = im.FactorScale("images/backgrounds/captainsloft.jpg", 1.0)
+image computer = im.FactorScale("images/backgrounds/captainsloft.jpg", 1.0)
+image computer_video = im.FactorScale("images/backgrounds/captainsloft.jpg", 1.0)
 image city = im.FactorScale("images/backgrounds/city.jpg", 0.75)
-image hall = im.FactorScale("images/backgrounds/messhallwindow.jpg", 0.75)
-image space2 = im.FactorScale("images/backgrounds/space2.jpg", 0.62)
-image lab = im.FactorScale("images/backgrounds/lab.jpg", 0.75)
+image lab = im.FactorScale("images/backgrounds/lab.jpg", 1.2)
 
 # character images
 image img_ben = im.FactorScale("images/characters/white/ben_carlson.png", 0.25)
@@ -18,7 +16,8 @@ image img_chris = im.FactorScale("images/characters/white/chris_harrison.png", 0
 image img_chris_mini = im.FactorScale("images/characters/white/chris_harrison.png", 0.25)
 image img_ceo = im.FactorScale("images/characters/white/ceo.png", 0.5)
 image img_traitor = im.FactorScale("images/characters/white/traitor.png", 0.5)
-image img_scientist = im.FactorScale("images/characters/white/scientist.png", 0.25)
+image img_scientist = im.FactorScale("images/characters/white/scientist.png", 0.5)
+image img_scientist_mini = im.FactorScale("images/characters/white/scientist.png", 0.25)
 image img_inventor = im.FactorScale("images/characters/white/inventor.png", 0.5)
 image img_investor = im.FactorScale("images/characters/white/investor.png", 0.5)
 
@@ -48,8 +47,6 @@ define video = Character("", kind=nvl, color="#fff")
 
 # The game starts here.
 label start:
-
-    call intro
 
     #initialize state values
     python:
@@ -168,7 +165,7 @@ label computer:
     if computer_mode == "email":
         scene computer with dissolve
         menu:
-            "inventor" if inventor_interview_available and not inventor_interview_seen:
+            "Kimberly McLaren" if inventor_interview_available and not inventor_interview_seen:
                 call inventor_email
                 $inventor_interview_seen = True
 
@@ -176,11 +173,11 @@ label computer:
                 call investor_email
                 $investor_interview_seen = True
 
-            "CEO" if (ceo_interview_available and not ceo_interview_seen):
+            "Chad Hewett" if (ceo_interview_available and not ceo_interview_seen):
                 call ceo_email
                 $ceo_interview_seen = True
 
-            "Impmementer" if inventor_interview_2_available and not inventor_interview_2_seen:
+            "Kimberly McLaren" if inventor_interview_2_available and not inventor_interview_2_seen:
                 call inventor_email_2
                 $inventor_interview_2_seen = True
 

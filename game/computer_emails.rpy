@@ -6,11 +6,11 @@ label ceo_email:
 
     return
 
-label implementer_email:
+label inventor_email:
 
     return
 
-label implementer_email_2:
+label inventor_email_2:
 
     return
 

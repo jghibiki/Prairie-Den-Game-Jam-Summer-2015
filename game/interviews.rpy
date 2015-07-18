@@ -94,7 +94,11 @@ label enviro_interview:
         "The genesis gate in the Farest System must have been sabotaged.":
             $stance = 5
             $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
+    ben "Time to write that article."
 
+    show black with dissolve
+    pause 0.5
+    show room with dissolve
     return
 
 label vp_interview:
@@ -124,5 +128,11 @@ label vp_interview:
         "Expose Ellen for the crazed lunatic she is.":
             $stance = 5
             $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+
+    ben "Time to write that article."
+
+    show black with dissolve
+    pause 0.5
+    show room with dissolve
 
    return
