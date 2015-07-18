@@ -124,6 +124,10 @@ label vp_interview:
 
     traitor "I understand, Ben.{w} Remember you can't take your time with this issue. Obviously you shouldn't disclose me as a source on this matter."
 
+    scene black with dissolve
+    pause 0.2
+    scene room with dissolve
+
     menu:
         "Following my interview with Ellen Wyse, VP of CPC, I think..."
 
