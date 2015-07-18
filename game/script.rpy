@@ -18,7 +18,8 @@ image img_chris = im.FactorScale("images/characters/white/chris_harrison.png", 0
 image img_chris_mini = im.FactorScale("images/characters/white/chris_harrison.png", 0.25)
 image img_ceo = im.FactorScale("images/characters/white/ceo.png", 0.5)
 image img_traitor = im.FactorScale("images/characters/white/traitor.png", 0.5)
-image img_scientist = im.FactorScale("images/characters/white/scientist.png", 0.25)
+image img_scientist = im.FactorScale("images/characters/white/scientist.png", 0.5)
+image img_scientist_mini = im.FactorScale("images/characters/white/scientist.png", 0.25)
 image img_inventor = im.FactorScale("images/characters/white/inventor.png", 0.5)
 image img_investor = im.FactorScale("images/characters/white/investor.png", 0.5)
 
@@ -168,7 +169,7 @@ label computer:
     if computer_mode == "email":
         scene computer with dissolve
         menu:
-            "inventor" if inventor_interview_available and not inventor_interview_seen:
+            "Kimberly McLaren" if inventor_interview_available and not inventor_interview_seen:
                 call inventor_email
                 $inventor_interview_seen = True
 
@@ -176,11 +177,11 @@ label computer:
                 call investor_email
                 $investor_interview_seen = True
 
-            "CEO" if (ceo_interview_available and not ceo_interview_seen):
+            "Chad Hewett" if (ceo_interview_available and not ceo_interview_seen):
                 call ceo_email
                 $ceo_interview_seen = True
 
-            "Impmementer" if inventor_interview_2_available and not inventor_interview_2_seen:
+            "Kimberly McLaren" if inventor_interview_2_available and not inventor_interview_2_seen:
                 call inventor_email_2
                 $inventor_interview_2_seen = True
 

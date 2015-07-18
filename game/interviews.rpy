@@ -30,16 +30,16 @@ label phd_interview:
         "Oragami Effect could be weaponized":
             $stance -= 1
             $cpc_influence += 2
-            $phd_interview_synopsis = "Dr. Dorian reintroduced me the basic concept of the Origami Effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w} When I questioned him about the possibility of this potential technology being used to create weapons, he failed to convince me that there was no danger.{w} His main defence was to say that we cannot yet produce enough power to weaponize the Origami Effect."
+            $phd_interview_synopsis = "Dr. Dorian reintroduced me the basic concept of the Origami Effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w}\n When I questioned him about the possibility of this potential technology being used to create weapons, he failed to convince me that there was no danger.{w}\n His main defence was to say that we cannot yet produce enough power to weaponize the Origami Effect."
 
         "Oragami Effect is impractical as a weapon":
             $cpc_influence += 1 
-            $phd_interview_synopsis = "Dr. Dorian reintroduced me the basic concept of the Origami Effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w} When I questioned him about the possibility of this potential technology being used to create weapons, he assured me that using the Origami Effect in a weapon would be impractical.{w} We cannot yet produce enough power to weaponize the Origami Effect."
+            $phd_interview_synopsis = "Dr. Dorian reintroduced me the basic concept of the Origami Effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w}\n When I questioned him about the possibility of this potential technology being used to create weapons, he assured me that using the Origami Effect in a weapon would be impractical.{w}\n We cannot yet produce enough power to weaponize the Origami Effect."
 
         "Origami Effect cannot be used in the creation of a weapon":
             $neog_influence += 1
             $stance += 1
-            $phd_interview_synopsis = "Dr. Dorian reintroduced me the basic concept of the Origami Effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w} When I questioned him about the possibility of this potential technology being used to create weapons, he assured me that using the Origami Effect in a weapon would be impossible.{w} Reguardless of technological advances, there are no means with which to weaponize the Origami Effect."
+            $phd_interview_synopsis = "Dr. Dorian reintroduced me the basic concept of the Origami Effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w}\n When I questioned him about the possibility of this potential technology being used to create weapons, he assured me that using the Origami Effect in a weapon would be impossible.{w}\n Reguardless of technological advances, there are no means with which to weaponize the Origami Effect."
     
     ben "Time to write that article"
     
