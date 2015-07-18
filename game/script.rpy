@@ -37,32 +37,38 @@ label start_computer:
     jump computer
 
 label computer:
-    call screen computer
+    if computer_mode == None:
+        menu:
+            "Watch News Clips":
+                $computer_mode = "video"
 
-    # computer states
-    if _return == "watch_video":
-        $computer_mode = "video"
-    elif _return == "check_email":
-        $computer_mode = "email"
-    elif _return == "leave_computer":
-        jump investigate
-    elif _return == "exit_videos":
-        $computer_mode = None
-    elif _return == "exit_email":
-        $computer_mode = None
-    
-    # videos 
-    elif _return == "ben_intro_video":
-        $first_video = False
-        call ben_intro_video
-    elif _return == "origami_intro_video":
-        call origami_intro_video
+            "Check Emails":
+                $computer_mode = "email"
 
-    jump computer
-    
+            "Leave Computer":
+                jump investigate
+
+    if computer_mode == "video":
+        menu:
+            "Ben Carlson Misreports Mass Execution":
+                call ben_intro_video
+
+            "Origami Effect Conceptualized by X22  PhD" if (not first_video):
+                call origami_intro_video
+
+            "Back":
+                jump start_computer
+
+    if computer_mode == "email":
+        menu:
+            "Back":
+                jump start_computer
+
+    jump computer 
 
 label investigate:
-    call screen investigate
+    menu:
+        
 
-    if _return == "start_computer":
-        jump start_computer
+        "Check Computer":
+            jump start_computer
