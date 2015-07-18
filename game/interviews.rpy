@@ -18,7 +18,7 @@ label phd_interview:
 
     ben "So, Doctor assuming your theory is eventually implemented, there are misgivings in the scientific community that a device implemented using your theory could be used to coagulate astral bodies into one giant mass,{w} creating the theoretical conditions for an synthetic black hole.{w} What then, if instead of funding a new transportation method, funding was provided to utilize the theory in a weapon?"
 
-    scientist "Ha! Even if someone did manage to implement my theory any time soon - much less weaponize it - the ammount of energy it would take to, fold space over and over until enough astral bodies are positioned in the same gravitaional sphere to produce a black hole, is tremendous. By our current standards and forseeable future standards, impossible!"
+    scientist "Ha! Even if someone did manage to implement my theory any time soon - much less weaponize it - the ammount of energy it would take to, fold space over and over until enough celestial bodies are positioned to significantly attract each other gravitaionally to produce a black hole, is tremendous. By our current standards and forseeable future standards, impossible!"
 
     scene black with dissolve
     pause 0.2
@@ -50,11 +50,54 @@ label phd_interview:
 
 
 label investor_interview:
+    show black with dissolve
+    pause 0.5
+    show room with dissolve
 
+    ben "I just can't find anything on him.{w} It's like he's watching my every move.{w} I'm being followed when I'm out, I better be careful."
+
+    menu:
+        "This development is concerning, I think..."
+
+        "To be safe I'll expose my watchdog.":
+            $stance -= 1
+            $investor_interview_synopsis = "The investor has taken many precautions to hide his identity."
+
+        "I'll act like nothing is happening and write a personal blog entry.":
+            $investor_interview_synopsis = "The investor has taken many precautions to hide his identity."
+
+    ben "Time to write that article"
+
+    show black with dissolve
+    pause 0.5
+    show room with dissolve
     return
 
 
 label enviro_interview:
+    ben "Mr. Malcom, your organization, the Celestial Preservation Coalition, recently called for origami effect regulations.{w} You also publicly encourage challenging NeoGenesis while they deploy their genesis gates.{w} What sparked these protests?"
+
+    environmentalist "I’m glad that somebody will listen to our side, Ben.{w} Due to the recent accident at the Farest system's genesis gate caused by energy anomalies said to be caused by a solar flare.{w} It is very clear that these genesis gates can be dangerous.{w} We need new regulations and more competition in the industry to help ensure things are done right.{w} There is no reason that an entire star system should be wiped from existence due to an accident."
+
+    ben "Genesis gates alleges that their genesis gate was sabotaged.{w} It might have not been an accident."
+
+    environmentalist "I can assure you Mr. Carlson we are a peaceful organization acting within the bounds of the law.{w} I do have to admit that sabotage might help in our end goal, but blowing up a whole star system does not.{w} Here, let me help you get in contact with our Vice President, Ellen Wyse, who oversees our internal day to day operations."
+
+    menu:
+        "Following my interview with Lenard Malcom of CPC, I think..."
+
+        "NeoGenesis should be held responsible for their negligence.":
+            $stance -= 1
+            $cpc_influence += 1
+            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
+
+        "How could a genesis gate implode an entire star system with just a solar flare?": 
+            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
+
+        "The genesis gate in the Farest system must have been sabotaged.":
+            $neog_influence += 1
+            $stance += 1
+            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
 
     return
 

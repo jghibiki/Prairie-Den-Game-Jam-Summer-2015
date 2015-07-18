@@ -30,17 +30,17 @@ define ceo = Character('Chad Hewett', color="#0088FF")
 define scientist = Character('Dr. Matthew Dorian', color="#0088FF")
 define inventor = Character("Kimberly McLaren", kind=nvl, color="#0088FF")
 
-define evnironmentalist = Character('Lenard Malcom', color="#09FF00")
+define environmentalist = Character('Lenard Malcom', color="#09FF00")
 define traitor = Character("Ellen Wyse", color="#09FF00")
 
-define chrise = Character("Chris Harrison", color="#c8ffc8")
+define chris = Character("Chris Harrison", color="#c8ffc8")
 
 define video = Character("", kind=nvl, color="#fff")
 
 
 #########
 #NOTES:
-# NeoGenisis: + integer values
+# NeoGenesis: + integer values
 # Celestial Preservation Coalition: - integer values
 #
 # Character Aliases - SED project to fix
@@ -224,7 +224,7 @@ label investigate:
             jump computer
 
         "Lenard Malcom" if enviro_interview_available and not enviro_interview_seen:
-            call enviro_inverview
+            call enviro_interview
             $enviro_interview_seen = True
             $vp_interview_available = True
         "Ellen Wyse" if vp_interview_available and not vp_interview_seen:
