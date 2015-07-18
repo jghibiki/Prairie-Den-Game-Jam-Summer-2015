@@ -41,42 +41,42 @@ init -1 python hide:
 
     theme.threeD(
         ## Theme: 3D
-        ## Color scheme: Muted Horror
+        ## Color scheme: Colorblind
 
         ## The color of an idle widget face.
-        widget = "#777777",
+        widget = "#898989",
 
         ## The color of a focused widget face.
-        widget_hover = "#73735C",
+        widget_hover = "#464646",
 
         ## The color of the text in a widget.
-        widget_text = "#404033",
+        widget_text = "#CCCCCC",
 
         ## The color of the text in a selected widget. (For
         ## example, the current value of a preference.)
-        widget_selected = "#000000",
+        widget_selected = "#F2F2F2",
 
         ## The color of a disabled widget face.
-        disabled = "#73735C",
+        disabled = "#898989",
 
         ## The color of disabled widget text.
-        disabled_text = "#8C8C70",
+        disabled_text = "#666666",
 
         ## The color of informational labels.
-        label = "#1A0001",
+        label = "#c2c2c2",
 
         ## The color of a frame containing widgets.
-        frame = "#555544",
+        frame = "#252525",
 
         ## The background of the main menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        mm_root = "#1A0001",
+        mm_root = "#393939",
 
         ## The background of the game menu. This can be a color
         ## beginning with '#', or an image filename. The latter
         ## should take up the full height and width of the screen.
-        gm_root = "#1A0001",
+        gm_root = "#393939",
 
         ## If this is True, the in-game window is rounded. If False,
         ## the in-game window is square.

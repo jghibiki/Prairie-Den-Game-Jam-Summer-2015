@@ -4,6 +4,7 @@
 # eg. image eileen happy = "eileen_happy.png"
 image black = "#000"
 image white = "#fff"
+image room = "#555000"
 image img_ben = "game/images/characters/white/ben_carlson.png"
 image img_chris = "game/images/characters/white/chris_harrison.png"
 image img_ceo = "game/images/characters/white/ceo.png"
@@ -84,7 +85,7 @@ label start:
 
         # alignment values
         stance = 0
-        neogeo_influence = 0
+        neog_influence = 0
         cpc_influence = 0
     
 
@@ -176,13 +177,14 @@ label computer:
     jump computer 
 
 label overview:
+    scene room with dissolve
     menu:
-        "Check Notes":
-            jump notepad
         "Check Computer":
             jump start_computer
         "Investigate":
             jump investigate
+        "Check Notes":
+            jump notepad
 
 label investigate:
     menu:
@@ -225,16 +227,16 @@ label investigate:
 label notepad:
     menu: 
         "phd" if phd_interview_seen:
-            center "%(phd_interview_synopsis)"
+            centered "[phd_interview_synopsis]"
 
         "implementer" if implementer_interview_seen:
-            center "%(implementer_interview_synopsis)"
+            centered "[implementer_interview_synopsis]"
 
         "investor" if investor_interview_seen:
-            center "%(investor_interview_synopsis)"
+            centered "[investor_interview_synopsis]"
 
         "ceo" if ceo_interview_seen:
-            center "%(ceo_interview_synopsis)"
+            centered "[ceo_interview_synopsis]"
 
         "Back":
             jump overview
