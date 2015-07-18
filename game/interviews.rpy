@@ -114,4 +114,20 @@ label vp_interview:
 
    traitor "I understand Ben.{w} Remember you can't take your time with this, but you can't disclose me as a source, for obvious reasons."
 
+   menu:
+        "Following my interview with Ellen Wyse, VP of CPC, I think..."
+
+        "A full investigation should be conducted on the genesis gates by a reputable third party.":
+            $stance -= 1
+            $cpc_influence += 1
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+
+        "Chad Hewett needs to be investigated for plans to use the genesis gates as weapons.": 
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+
+        "Expose the crazed vendeta between CPC and NeoGenesis.":
+            $neog_influence += 1
+            $stance += 1
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+
    return
