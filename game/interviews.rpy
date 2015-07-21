@@ -3,41 +3,42 @@ label phd_interview:
     pause 0.5
     scene lab with dissolve
     show img_scientist
-    ben "Dr. Dorian, your theory of the Origami Effect is supposed to eventually bring  about a new chapter in the efficiency of space travel. How did you develop this theory?"    
+    ben "Dr. Dorian, it sounds like your work could start a new chapter for space travel. Could you summarize your theory for me?"
 
-    scientist "The theory of folding space time upon itself is not a new concept.{w} However, I have conceptualized a testable hypothesis that would allow us to - theoretically - fold space over on itself and then punch through the \"surface\" of the universe creating a hole that leads to another location in space, often called a wormhole."
-    scientist "Similar to origami, this can be used multiple times making several distant places in space seem much closer by folding space as you would fold a piece of paper.{w} Thus making it possible to travel to distant locations rapidly."
+    scientist "It's a hypothesis, Ben."
 
-    ben "That sounds like a rather bold concept. Are there any plans in the works to actually test and implement this concept or is this simply a grand theory?"
+    ben "Well, yeah. Tell me about your hypothesis then..."
 
-    scientist "It's a hypothesis Ben.{w} Though feasibly testable it isn't testable with the current state of technology today.{w} I do not forsee any breakthroughs in the implementation of my hypothesis, but hope to see it proved a theory in my life time.{w} As a project like this would require large venture capital to take interest in the concept of lowering the cost of transportation.{w} Unfortunately, at this point I don't think any one would be willing to put forth the capital needed to see this in practice."
+    scientist "Sure. Don't fall for the hype, the concept of folding space time is not new.{w} However, the bulk of my work puts forth a hypothesis that is testable far sooner than previous scientific models.{w} We might even be able to do small scale tests right now, which is why NeoGenesis has already secured the rights to my work, for a royalty of course."
+    scientist "Folding space time requires exponential energy meaning the bigger the fold the more energy per meter needed to make the fold.{w} My hypothesis calls for many little folds that cover the same distance as a big fold, which is much more manageable.{w} You can read my thesis for the details, but basically it is similar to origami with space time instead of paper.{w} Thus making it possible to travel many lightyears in the blink of an eye with much less energy than previously thought."
 
-    ben "So then you are telling me that at this point, it has no practicale uses?"
+    ben "I think the implications on transportation are obvious and it may be some time before we see it practically affecting our transportation systems.{w} However, many technologies have been implemented swiftly due to their value as a weapon.{w} What do you think about the warnings in the scientific community that a device using this origami effect could be used as a weapon of unprecedented destruction?"
 
-    scientist "No. That is not what I am saying at all. I am just saying it would be very expensive to attempt now, but say 10 years in the future, following current technology trends, it should be much more affordable."
+    scientist "Ha! Even if someone did manage to weaponize the origami effect it wouldn't be very precise. We're talking about taking out a star system as one of its smallest targets. Then take into consideration the amount of energy required...{w} more convnentional weapons are probably better suited to the task, though yes it could be \"weaponized\" to coagulate celestial bodies to a single point."
 
-    ben "So, Doctor assuming your hypothesis is eventually proven, there are warnings in the scientific community that a device implemented using your theory could be used to coagulate celestial bodies into one giant mass,{w} creating the theoretical conditions for an synthetic black hole.{w} What then, if instead of funding a new transportation method, funding was provided to utilize the origami effect hypothesis in a weapon?"
+    ben "Interesting.{w} Well I've got what I was interested in writing my article about.{w} Thank you for your time Dr. Dorian."
 
-    scientist "Ha! Even if someone did manage to implement my hypothesis any time soon - much less weaponize it - the ammount of energy it would take to, fold space over and over until enough celestial bodies are positioned to significantly attract each other gravitaionally to produce a black hole, is tremendous.{w} So, at present, the answer to your question is: it is impossible!"
+    scientist "Glad I could help. Let me know if you need further clarification."
+
+    ben "Thanks, will do."
 
     scene black with dissolve
     pause 0.2
     scene room with dissolve
 
     menu:
-        "Following my interview with Dr. Dorian, I think..."
+        "Following my interview with Dr. Dorian, I'll report..."
 
-        "The oragami effect hypothesis could be weaponized.":
+        "The origami effect will be the doom for mankind.":
             $stance = 2
-            $phd_interview_synopsis = "Dr. Dorian introduced me the basic concept of his hypothesis the origami effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w} When I questioned him about the possibility of this potential technology being used to create weapons, he was insistent there wasn't much practical danager.{w} His main defense was to say that we cannot yet produce enough power to weaponize the origami effect."
+            $phd_interview_synopsis = "Dr. Dorian introduced me the basic concept of his hypothesis the origami effect. He was insistent that it wasn't a practical weapon."
 
-        "The oragami effect hypothesis is impractical as a weapon":
-            $stance = 1
-            $phd_interview_synopsis = "Dr. Dorian introduced me the basic concept of his hypothesis the origami effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w} When I questioned him about the possibility of this potential technology being used to create weapons, he was insistent there wasn't much practical danager.{w} His main defense was to say that we cannot yet produce enough power to weaponize the origami effect."
+        "The origami effect is impractical as a weapon and could be the boon to industry outside of our solar system.":
+            $phd_interview_synopsis = "Dr. Dorian introduced me the basic concept of his hypothesis the origami effect. He was insistent that it wasn't a practical weapon."
 
-        "Origami Effect cannot be used in the creation of a weapon":
+        "Origami effect is a wondrous advancement for the economy.":
             $stance = 5
-            $phd_interview_synopsis = "Dr. Dorian introduced me the basic concept of his hypothesis the origami effect. By folding space over on itself, it should become possible to create a hole that bridges the two locations, similar to folding a piece of paper in half and poking a hole through it.{w} When I questioned him about the possibility of this potential technology being used to create weapons, he was insistent there wasn't much practical danager.{w} His main defense was to say that we cannot yet produce enough power to weaponize the origami effect."
+            $phd_interview_synopsis = "Dr. Dorian introduced me the basic concept of his hypothesis the origami effect. He was insistent that it wasn't a practical weapon."
     
     ben "Time to write that article."
     
@@ -50,19 +51,19 @@ label phd_interview:
 label investor_interview:
     show black with dissolve
     pause 0.5
-    show room with dissolve
+    scene room with dissolve
     show img_investor
 
     ben "I just can't find anything on him.{w} It's like he's watching my every move.{w} I'm being followed when I'm out though, I better be careful."
 
     menu:
-        "This development is concerning, I think..."
+        "This development is concerning, I'll report..."
 
-        "To be safe I'll expose my watchdog.":
+        "About my stalker.":
             $stance = 2
             $investor_interview_synopsis = "The investor has taken many precautions to hide his identity."
 
-        "I'll act like nothing is happening and write a personal blog entry.":
+        "Skip the report. Just update my neglected personal blog.":
             $investor_interview_synopsis = "The investor has taken many precautions to hide his identity."
 
     ben "Time to write that article."
@@ -74,11 +75,14 @@ label investor_interview:
 
 
 label enviro_interview:
-    ben "Mr. Malcom, your organization, the Celestial Preservation Coalition, recently called for origami effect regulations.{w} You also publicly encourage challenging NeoGenesis while they deploy their genesis gates utilizing the origami effect.{w} What sparked these protests?"
+    scene city
+    show img_enviro
 
-    environmentalist "I’m glad that somebody will listen to our side, Ben.{w} Due to the recent accident at the Farest System's genesis gate caused by energy anomalies said to be caused by a solar flare.{w} It is very clear that these genesis gates can be dangerous.{w} We need new regulations and more competition in the industry to help ensure things are done right.{w} There is no reason that an entire star system should be wiped from existence due to an accident."
+    ben "Mr. Malcom, your organization, the Celestial Preservation Coalition, recently called for origami effect regulations.{w} You also publicly encourage challenging NeoGenesis while they deploy their genesis gates that use the origami effect.{w} What sparked these protests?"
 
-    ben "Genesis gates alleges that their genesis gate was sabotaged.{w} It might have not been an accident."
+    environmentalist "I’m glad that somebody will listen to our side, Ben.{w} Due to the recent genesis gate malfunction caused by energy anomalies said to be caused by a solar flare.{w} It is very clear that these genesis gates can be dangerous.{w} We need new regulations and more competition in the industry to help ensure things are done right.{w} There is no reason that an entire star system should be wiped from existence for any reason."
+
+    ben "NeoGenesis Corporation alleges that their genesis gate was sabotaged.{w} It might have not been an accident."
 
     environmentalist "I can assure you Mr. Carlson we are a peaceful organization acting within the bounds of the law.{w} I do have to admit that sabotage might help in our end goal, but blowing up a whole star system does not.{w} Here, let me help you get in contact with our Vice President, Ellen Wyse, who oversees our internal day to day operations."
 
@@ -91,14 +95,15 @@ label enviro_interview:
 
         "NeoGenesis should be held responsible for their negligence.":
             $stance = 2
-            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
+            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety."
 
         "How could a genesis gate implode an entire star system with just a solar flare?": 
-            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
+            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety."
 
-        "The genesis gate in the Farest System must have been sabotaged.":
+        "The genesis gate must have been sabotaged, but maybe not by the CPC.":
             $stance = 5
-            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety if a genesis gate can wipe out a star system or potentially a galaxy with a malfunction caused by natural occurances or malicious tinkering."
+            $enviro_interview_synopsis = "Lenard is a passionate guy who wants what is best for everyone, but especially their safety."
+
     ben "Time to write that article."
 
     show black with dissolve
@@ -109,20 +114,24 @@ label enviro_interview:
 label vp_interview:
     show black with dissolve
     pause 0.5
-    show city with dissolve
+    scene city with dissolve
     show img_traitor
 
     ben "Ellen Wyse, I was informed that you lead the day to day operations for CPC.{w} Could you shed some light on how your organization operates for me and the public?"
 
-    traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems despite that despite their engineering efforts to lower the energy required to cause the origami effect for transportation they're still using near the theoretical power levels, while also not increasing the distance between their 'gates'."
+    traitor "Of course, Ben, we merely perform legal inspections on genesis gates.{w} What we've found might be surprising though.{w} It seems that their engineering efforts lowered the energy required to cause the origami effect for transportation, yet they're still using near the theoretical energy levels, while also not increasing the distance between their 'gates'."
 
     ben "What do you mean by 'gates'?"
 
-    traitor "Don't let Chad Hewett's charm fool you.{w} The Farest System accident/sabotage was a cover up for testing the genesis gate's potential as a weapon.{w} We just can't definitively prove it because...{w} well the evidence is gone and with the rumors of it being a sabotage with CPC being a suspect it's difficult to get close to any genesis gates to see if they too have the same or better potential for that matter as a weapon.{w} I know it might sound far fetched to you but we must stop Chad, please Ben.{w} What do you have left to lose since your reputation was washed away from not fact checking a military operative, even if he was a childhood friend?"
+    traitor "Don't let Chad Hewett's charm fool you.{w} The genesis gate incident was a cover up for testing the genesis gate's potential as a weapon.{w} We just can't definitively prove it because...{w} well the evidence is gone and with the rumors of it being a sabotage with CPC being a suspect it's difficult to get close to any genesis gates to see if they too have the same or better potential for that matter as a weapon."
 
-    ben "I'll think about it. This is a lot to take in."
+    ben "You seem to know a lot about NeoGenesis's internal operations."
 
-    traitor "I understand, Ben.{w} Remember you can't take your time with this issue. Obviously you shouldn't disclose me as a source on this matter."
+    traitor "I've invested into NeoGenesis to be on the board to guide humans beyond our solar system and even beyond humanity.{w} I know all of this because I've heard the rest of the board of directors talk about their plans.{w} They are planning to cause a big crunch for The Universe to do a big bounce so that The Universe continues eternally, ending everything that it is now.{w} They actually believe it is up to sentient beings to prevent the big freeze and hope sentient life re-evolves in the next universe to do the same.{w} These genesis gates are a gift for mankind, I'm just afraid of how they'll be used.{w} I know it might sound far fetched to you but we must stop Chad, please Ben."
+
+    ben "I'll have to think about it. That's a lot to take in."
+
+    traitor "I understand, Ben.{w} Remember you can't take your time with this issue."
 
     scene black with dissolve
     pause 0.2
@@ -131,16 +140,17 @@ label vp_interview:
     menu:
         "Following my interview with Ellen Wyse, VP of CPC, I think..."
 
-        "A full investigation should be conducted on the genesis gates by a reputable third party.":
-            $stance = 3
-            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+        "The genesis gates need to be destroyed before they can be used for mass destruction.":
+            $stance = 2
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent more than concern for safety or celestial preservation."
 
-        "Chad Hewett needs to be investigated for plans to use the genesis gates as weapons.": 
-            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+        "The mysterious investor comes forth and reveals Chad Hewett's corrupt plans.":
+            $stance = 3
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent more than concern for safety or celestial preservation."
 
         "Expose Ellen for the crazed lunatic she is.":
             $stance = 5
-            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent with them more than concern for safety or celestial preservation."
+            $vp_interview_synopsis = "Ellen seems to be against NeoGenesis based on her concerns for Chad Hewett's intent more than concern for safety or celestial preservation."
 
     ben "Time to write that article."
 
@@ -148,4 +158,4 @@ label vp_interview:
     pause 0.5
     show room with dissolve
 
-    return
+    jump end_game

@@ -15,18 +15,21 @@ image img_ben = im.FactorScale("images/characters/white/ben_carlson.png", 0.25)
 image img_chris = im.FactorScale("images/characters/white/chris_harrison.png", 0.5)
 image img_chris_mini = im.FactorScale("images/characters/white/chris_harrison.png", 0.25)
 image img_ceo = im.FactorScale("images/characters/white/ceo.png", 0.5)
+image img_ceo_mini = im.FactorScale("images/characters/white/ceo.png", 0.25)
 image img_traitor = im.FactorScale("images/characters/white/traitor.png", 0.5)
 image img_scientist = im.FactorScale("images/characters/white/scientist.png", 0.5)
 image img_scientist_mini = im.FactorScale("images/characters/white/scientist.png", 0.25)
 image img_inventor = im.FactorScale("images/characters/white/inventor.png", 0.5)
+image img_inventor_mini = im.FactorScale("images/characters/white/inventor.png", 0.25)
 image img_investor = im.FactorScale("images/characters/white/investor.png", 0.5)
+image img_investor_mini = im.FactorScale("images/characters/white/investor.png", 0.25)
 image img_enviro = im.FactorScale("images/characters/white/environmentalist.png", 0.5)
 
 # Declare characters used by this game.
 define ben = Character('Ben', color="#FF7700")
 define _ben = Character('Ben', kind=nvl, color="#FF7700")
 
-define ceo = Character('Chad Hewett', color="#0088FF")
+define ceo = Character('Chad Hewett', kind=nvl, color="#0088FF")
 define scientist = Character('Dr. Matthew Dorian', color="#0088FF")
 define inventor = Character("Kimberly McLaren", kind=nvl, color="#0088FF")
 
@@ -92,9 +95,7 @@ label start:
 
 
         # alignment values
-        stance = 0
-        neog_influence = 0
-        cpc_influence = 0
+        stance = 1
     
 
     jump overview
@@ -122,42 +123,42 @@ label computer:
     if computer_mode == "video":
         scene computer_video with dissolve
         menu:
-            "Ben Carlson Misreports Mass Execution":
+            "Ben Carlson Misreports Military Operation":
                 call ben_intro_video
                 $seen_ben_intro = True
 
-            "Origami Effect Conceptualized by Dr. Matthew Dorian" if seen_ben_intro:
+            "Dr. Matthew Dorian's Origami Effect Bought by NeoGenesis Corporation" if seen_ben_intro:
                 call origami_intro_video
                 $phd_interview_available = True
                 $seen_origami_intro = True
 
-            "Company Neo Genesis announces Universal Highway Project" if seen_origami_intro:
+            "NeoGenesis Corporation Aannounces Universal Highway Project" if seen_origami_intro:
                 call neo_genesis_highway_video
                 $inventor_interview_available = True
                 $seen_highway_video = True
             
-            "Neo Genesis Secures Generous Funding From Undisclosed Source" if seen_highway_video:
+            "NeoGenesis Corporation Secures Strong Funding" if seen_highway_video:
                 call generous_funding_video
                 $investor_interview_available = True
                 $seen_generous_funding_video = True
 
-            "Public Outcry After Neo Genesis Whistle-Blower Leaks Massive Budget Prompts Government Investigation" if seen_generous_funding_video:
+            "NeoGenesis Whistle-Blower Leaks higher Than Disclosed Budget" if (seen_generous_funding_video and inventor_interview_seen):
                 call public_outcry_video
                 $ceo_interview_available = True
                 $seen_public_outcry_video = True
 
-            "Government Investigation Reveals That Neo Genesis Money Is Being Spent As Intended" if seen_public_outcry_video:
+            "Government Rules In Favor of NeoGenesis Corporation" if seen_public_outcry_video:
                 call government_investigation_video
                 $seen_government_investigation_video = True
 
-            "Ion Storm Causes Malfunction in Genesis Gate Causing The Destruction Of A Nearby Star System" if (seen_highway_video and inventor_interview_seen):
+            "Genesis Gate Malfunctions" if (seen_highway_video and inventor_interview_seen):
                 call ion_storm_video
                 $seen_ion_storm_video = True
                 $inventor_interview_2_available = True
 
-            "Celestial Preservation Coalition Forms, Demanding Regulations For Origami Effect Utilization" if seen_ion_storm_video:
+            "CPC Leads Demands for Regulations on Genesis Gates" if seen_ion_storm_video:
                 call cpc_video
-                $seen_cpc_video = False
+                $seen_cpc_video = True
                 $enviro_interview_available = True
 
             "Back":
@@ -171,7 +172,7 @@ label computer:
                 $inventor_interview_seen = True
 
             "Investor" if (investor_interview_available and not investor_interview_seen):
-                call investor_email
+                call investor_interview
                 $investor_interview_seen = True
 
             "Chad Hewett" if (ceo_interview_available and not ceo_interview_seen):
@@ -250,7 +251,7 @@ label notepad:
         "Chad Hewett" if ceo_interview_seen:
             centered "[ceo_interview_synopsis]"
 
-        "Kimberly McLaren Interview #2" if inventor_interview_seen:
+        "Kimberly McLaren Interview #2" if inventor_interview_2_seen:
             centered "[inventor_interview_2_synopsis]"
 
         "Lenard Malcom" if enviro_interview_seen:
@@ -275,4 +276,52 @@ label intro:
 
     show black with dissolve
     pause 0.2
+    return
+
+label end_game:
+    if stance == 1:
+        jump ending1
+    elif stance == 2:
+        jump ending2
+    elif stance == 3:
+        jump ending3
+    elif stance == 4:
+        jump ending4
+    elif stance == 5:
+        jump ending5
+
+label ending1:
+    scene black
+    pause 0.2
+    show space2 with dissolve
+
+    centered "Chris Harrison leads operation to eliminate NeoGenesis key figures and critical machinery."
+    return    
+label ending2:
+    scene black
+    pause 0.2
+    show space2 with dissolve
+
+    centered "Under public pressure, NeoGenesis is forced to break up its company and Chad's goal is thwarted."
+    return
+label ending3:
+    scene black
+    pause 0.2
+    show space2 with dissolve
+
+    centered "Ellen Wyse is the sole leader of NeoGenesis and she uses the gates to secure even more power to guide humanity beyond."
+    return
+label ending4:
+    scene black
+    pause 0.2
+    show space2 with dissolve
+
+    centered "A semi crunch was performed due to a drastic under estimation of the energy required. Though it is found it might be usable to counter the big freeze without ending The Universe."
+    return
+label ending5:
+    scene black
+    pause 0.2
+    show space2 with dissolve
+
+    centered "Over the years Chad Hewett's plan is finally realized and a big crunch commences. A big bounce was successful for those who have faith."
     return
